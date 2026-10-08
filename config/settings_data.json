@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_schemes": {
@@ -80,9 +89,7 @@
     "social_facebook_link": "",
     "social_pinterest_link": "https://pinterest.com/mirevaine",
     "social_youtube_link": "",
-    "social_x_link": "",
-    "sections": {},
-    "blocks": {}
+    "social_x_link": ""
   },
   "presets": {
     "Mirevaine Atelier": {
