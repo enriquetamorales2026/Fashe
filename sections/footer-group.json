@@ -5,33 +5,50 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "menu-1": {
-          "type": "menu",
-          "settings": { "heading": "Shop", "menu": "footer" }
-        },
-        "text-1": {
+        "brand-about": {
           "type": "text",
           "settings": {
-            "heading": "About",
-            "text": "<p>Modern wardrobe essentials, made to last.</p>"
+            "heading": "MIREVAINE",
+            "text": "<p>Devoted to quiet permanence, noble textiles, and master European craftsmanship. Designed between Paris and Florence.</p>"
           }
         },
-        "newsletter-1": {
+        "menu-categories": {
+          "type": "menu",
+          "settings": {
+            "heading": "Collections",
+            "menu": "footer"
+          }
+        },
+        "client-services": {
+          "type": "text",
+          "settings": {
+            "heading": "Client Concierge",
+            "text": "<p>Bespoke Styling & Sizing<br>Archival Garment Care<br>Complimentary Global Shipping<br>concierge@mirevaine.com</p>"
+          }
+        },
+        "newsletter-gazette": {
           "type": "newsletter",
           "settings": {
-            "heading": "Newsletter",
-            "text": "<p>New arrivals and offers, straight to your inbox.</p>"
+            "heading": "The Gazette",
+            "text": "<p>Receive private invitations to archival capsules and seasonal monograph releases.</p>"
           }
         }
       },
-      "block_order": ["menu-1", "text-1", "newsletter-1"],
+      "block_order": [
+        "brand-about",
+        "menu-categories",
+        "client-services",
+        "newsletter-gazette"
+      ],
       "settings": {
         "show_social": true,
         "show_payment_icons": true,
         "show_policy_links": true,
-        "color_scheme": "scheme_1"
+        "color_scheme": "scheme_3"
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

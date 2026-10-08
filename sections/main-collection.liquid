@@ -10,35 +10,48 @@
         </div>
       </div>
 
-      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-        {% render 'facets', results: collection %}
-      {%- endif -%}
-
-      <div id="ProductGrid">
-        {%- if collection.products.size > 0 -%}
-          <div
-            class="grid grid--products"
-            style="--columns: {{ section.settings.columns_desktop }}; --columns-mobile: {{ section.settings.columns_mobile }};"
-          >
-            {%- for product in collection.products -%}
-              <div data-animate>
-                {% render 'product-card',
-                  product: product,
-                  sizes: '(min-width: 990px) calc(100vw / 4), (min-width: 750px) 33vw, 50vw'
-                %}
-              </div>
-            {%- endfor -%}
-          </div>
-
-          {% render 'pagination', paginate: paginate %}
-        {%- else -%}
-          <div class="cart-empty">
-            <p class="h3">{{ 'sections.collection.empty' | t }}</p>
-            <a href="{{ routes.all_products_collection_url }}" class="button button--outline">
-              {{ 'sections.collection.browse_all' | t }}
-            </a>
-          </div>
+      <div class="collection-layout{% if section.settings.layout == 'sidebar' %} collection-layout--sidebar{% endif %}">
+        {%- if section.settings.layout == 'sidebar' -%}
+          <aside class="collection-layout__sidebar" aria-label="{{ section.settings.sidebar_heading | default: 'Category' }}">
+            {% render 'category-sidebar',
+              heading: section.settings.sidebar_heading,
+              menu: section.settings.sidebar_menu
+            %}
+          </aside>
         {%- endif -%}
+
+        <div class="collection-layout__main">
+          {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+            {% render 'facets', results: collection %}
+          {%- endif -%}
+
+          <div id="ProductGrid">
+            {%- if collection.products.size > 0 -%}
+              <div
+                class="grid grid--products"
+                style="--columns: {{ section.settings.columns_desktop }}; --columns-mobile: {{ section.settings.columns_mobile }};"
+              >
+                {%- for product in collection.products -%}
+                  <div data-animate>
+                    {% render 'product-card',
+                      product: product,
+                      sizes: '(min-width: 990px) calc(100vw / 4), (min-width: 750px) 33vw, 50vw'
+                    %}
+                  </div>
+                {%- endfor -%}
+              </div>
+
+              {% render 'pagination', paginate: paginate %}
+            {%- else -%}
+              <div class="cart-empty">
+                <p class="h3">{{ 'sections.collection.empty' | t }}</p>
+                <a href="{{ routes.all_products_collection_url }}" class="button button--outline">
+                  {{ 'sections.collection.browse_all' | t }}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -49,6 +62,34 @@
   "name": "t:sections.main-collection.name",
   "tag": "div",
   "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "Category Sidebar"
+        },
+        {
+          "value": "top",
+          "label": "Top bar only"
+        }
+      ],
+      "default": "sidebar"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_heading",
+      "label": "Sidebar Heading",
+      "default": "Category"
+    },
+    {
+      "type": "link_list",
+      "id": "sidebar_menu",
+      "label": "Category Menu",
+      "info": "Optional. Defaults to Handbags, Jewelry, Belts, Scarves, Hair accessories."
+    },
     {
       "type": "checkbox",
       "id": "show_description",
@@ -84,7 +125,7 @@
       "max": 5,
       "step": 1,
       "label": "t:sections.main-collection.settings.columns_desktop.label",
-      "default": 4
+      "default": 3
     },
     {
       "type": "select",

@@ -3,57 +3,57 @@
     "color_schemes": {
       "scheme_1": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#faf8f5",
           "background_gradient": "",
-          "text": "#141414",
-          "button": "#141414",
-          "button_label": "#ffffff",
-          "outline_button": "#141414",
-          "accent": "#c8553d",
-          "border": "#e4e4e4"
+          "text": "#141312",
+          "button": "#141312",
+          "button_label": "#faf8f5",
+          "outline_button": "#141312",
+          "accent": "#b38e5d",
+          "border": "#eae4d9"
         }
       },
       "scheme_2": {
         "settings": {
-          "background": "#f4f2ee",
+          "background": "#f2ede4",
           "background_gradient": "",
-          "text": "#141414",
-          "button": "#141414",
-          "button_label": "#f4f2ee",
-          "outline_button": "#141414",
-          "accent": "#c8553d",
-          "border": "#dcd8d0"
+          "text": "#141312",
+          "button": "#141312",
+          "button_label": "#f2ede4",
+          "outline_button": "#141312",
+          "accent": "#a07c4b",
+          "border": "#ded5c6"
         }
       },
       "scheme_3": {
         "settings": {
-          "background": "#141414",
+          "background": "#121110",
           "background_gradient": "",
-          "text": "#f4f2ee",
-          "button": "#f4f2ee",
-          "button_label": "#141414",
-          "outline_button": "#f4f2ee",
-          "accent": "#e2a087",
-          "border": "#333333"
+          "text": "#f7f4ee",
+          "button": "#f7f4ee",
+          "button_label": "#121110",
+          "outline_button": "#f7f4ee",
+          "accent": "#cbb08b",
+          "border": "#282522"
         }
       },
       "scheme_4": {
         "settings": {
-          "background": "#c8553d",
+          "background": "#201e1b",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#c8553d",
-          "outline_button": "#ffffff",
-          "accent": "#ffffff",
-          "border": "#d97c68"
+          "text": "#faf8f5",
+          "button": "#cbb08b",
+          "button_label": "#121110",
+          "outline_button": "#cbb08b",
+          "accent": "#cbb08b",
+          "border": "#35322d"
         }
       }
     },
-    "heading_font": "assistant_n4",
+    "heading_font": "cormorant_garamond_n4",
     "heading_case": "none",
-    "heading_tracking": -2,
-    "heading_scale": 100,
+    "heading_tracking": 2,
+    "heading_scale": 105,
     "body_font": "assistant_n4",
     "body_scale": 100,
     "page_width": 1440,
@@ -67,63 +67,85 @@
     "card_quick_add": true,
     "card_show_swatches": true,
     "cart_type": "drawer",
-    "cart_notes": false,
-    "cart_show_free_shipping_bar": false,
-    "cart_free_shipping_threshold": "100",
+    "cart_notes": true,
+    "cart_show_free_shipping_bar": true,
+    "cart_free_shipping_threshold": "250",
     "predictive_search_enabled": true,
     "predictive_search_show_price": true,
     "animations_reveal": true,
     "animations_hover_zoom": true,
-    "logo_width": 120,
-    "social_instagram_link": "",
+    "logo_width": 160,
+    "social_instagram_link": "https://instagram.com/mirevaine",
     "social_tiktok_link": "",
     "social_facebook_link": "",
-    "social_pinterest_link": "",
+    "social_pinterest_link": "https://pinterest.com/mirevaine",
     "social_youtube_link": "",
     "social_x_link": "",
     "sections": {},
     "blocks": {}
   },
   "presets": {
-    "Fashe": {
+    "Mirevaine Atelier": {
       "color_schemes": {
         "scheme_1": {
           "settings": {
-            "background": "#ffffff",
-            "text": "#141414",
-            "button": "#141414",
-            "button_label": "#ffffff",
-            "outline_button": "#141414",
-            "accent": "#c8553d",
-            "border": "#e4e4e4"
+            "background": "#faf8f5",
+            "text": "#141312",
+            "button": "#141312",
+            "button_label": "#faf8f5",
+            "outline_button": "#141312",
+            "accent": "#b38e5d",
+            "border": "#eae4d9"
+          }
+        },
+        "scheme_2": {
+          "settings": {
+            "background": "#f2ede4",
+            "text": "#141312",
+            "button": "#141312",
+            "button_label": "#f2ede4",
+            "outline_button": "#141312",
+            "accent": "#a07c4b",
+            "border": "#ded5c6"
+          }
+        },
+        "scheme_3": {
+          "settings": {
+            "background": "#121110",
+            "text": "#f7f4ee",
+            "button": "#f7f4ee",
+            "button_label": "#121110",
+            "outline_button": "#f7f4ee",
+            "accent": "#cbb08b",
+            "border": "#282522"
           }
         }
       },
-      "heading_font": "assistant_n4",
+      "heading_font": "cormorant_garamond_n4",
       "body_font": "assistant_n4",
       "card_image_ratio": "portrait",
       "radius_base": 0,
       "radius_media": 0
     },
-    "Fashe Soft": {
+    "Mirevaine Noir": {
       "color_schemes": {
         "scheme_1": {
           "settings": {
-            "background": "#faf7f2",
-            "text": "#2b2622",
-            "button": "#2b2622",
-            "button_label": "#faf7f2",
-            "outline_button": "#2b2622",
-            "accent": "#a8714f",
-            "border": "#e6ded2"
+            "background": "#121110",
+            "text": "#f7f4ee",
+            "button": "#f7f4ee",
+            "button_label": "#121110",
+            "outline_button": "#f7f4ee",
+            "accent": "#cbb08b",
+            "border": "#282522"
           }
         }
       },
-      "heading_font": "assistant_n4",
+      "heading_font": "cormorant_garamond_n4",
       "body_font": "assistant_n4",
-      "card_image_ratio": "tall",
-      "radius_base": 24,
-      "radius_media": 16
+      "card_image_ratio": "portrait",
+      "radius_base": 0,
+      "radius_media": 0
     }
   }
 }

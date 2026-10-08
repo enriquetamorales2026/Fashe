@@ -34,7 +34,10 @@
             loading: 'eager'
         }}
       {%- else -%}
-        {{ shop.name }}
+        <span class="header__brand">
+          <span class="header__brand-title">MIREVAINE</span>
+          <span class="header__brand-sub">ATELIER &bull; PARIS</span>
+        </span>
       {%- endif -%}
     {%- endcapture -%}
 

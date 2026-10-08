@@ -1,0 +1,52 @@
+{%- comment -%}
+  Renders an editorial luxury Category list navigation widget.
+  Accepts:
+  - heading: Optional heading text (default: 'Category')
+  - menu: Optional linklist to loop through
+  - active_category: String to match active item
+{%- endcomment -%}
+
+{%- assign category_heading = heading | default: 'Category' -%}
+
+<div class="category-sidebar" id="CategorySidebar">
+  <div class="category-sidebar__header">
+    <h3 class="category-sidebar__title">{{ category_heading }}</h3>
+  </div>
+
+  <nav class="category-sidebar__nav" aria-label="{{ category_heading }}">
+    <ul class="category-sidebar__list" role="list">
+      {%- if menu != blank and linklists[menu].links.size > 0 -%}
+        {%- for link in linklists[menu].links -%}
+          <li class="category-sidebar__item">
+            <a
+              href="{{ link.url }}"
+              class="category-sidebar__link{% if link.active or link.current %} category-sidebar__link--active{% endif %}"
+              {% if link.active or link.current %}aria-current="page"{% endif %}
+            >
+              <span class="category-sidebar__name">{{ link.title | escape }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- else -%}
+        {%- comment -%} Curated luxury category defaults as requested {%- endcomment -%}
+        {%- assign default_categories = "Handbags,Jewelry,Belts,Scarves,Hair accessories" | split: "," -%}
+        {%- for cat in default_categories -%}
+          {%- assign cat_handle = cat | handleize -%}
+          {%- assign is_active = false -%}
+          {%- if collection.handle == cat_handle -%}
+            {%- assign is_active = true -%}
+          {%- endif -%}
+          <li class="category-sidebar__item">
+            <a
+              href="{{ routes.collections_url }}/{{ cat_handle }}"
+              class="category-sidebar__link{% if is_active %} category-sidebar__link--active{% endif %}"
+              {% if is_active %}aria-current="page"{% endif %}
+            >
+              <span class="category-sidebar__name">{{ cat }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </nav>
+</div>
