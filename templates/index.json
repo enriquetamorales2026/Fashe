@@ -3,13 +3,6 @@
     "hero": {
       "type": "hero",
       "blocks": {
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p class=\"eyebrow\">The Archival Capsule &bull; Autumn / Winter</p>",
-            "alignment": "center"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -29,13 +22,13 @@
           "type": "button",
           "settings": {
             "label": "Explore The Archival Collection",
+            "link": "/collections/all",
             "style": "solid",
             "alignment": "center"
           }
         }
       },
       "block_order": [
-        "eyebrow",
         "heading",
         "text",
         "button"
@@ -91,31 +84,31 @@
     "collection-list": {
       "type": "collection-list",
       "blocks": {
-        "cat-handbags": {
+        "collection-1": {
           "type": "collection",
           "settings": {
             "heading": "Handbags"
           }
         },
-        "cat-jewelry": {
+        "collection-2": {
           "type": "collection",
           "settings": {
             "heading": "Jewelry"
           }
         },
-        "cat-belts": {
+        "collection-3": {
           "type": "collection",
           "settings": {
             "heading": "Belts"
           }
         },
-        "cat-scarves": {
+        "collection-4": {
           "type": "collection",
           "settings": {
             "heading": "Scarves"
           }
         },
-        "cat-hair": {
+        "collection-5": {
           "type": "collection",
           "settings": {
             "heading": "Hair accessories"
@@ -123,11 +116,11 @@
         }
       },
       "block_order": [
-        "cat-handbags",
-        "cat-jewelry",
-        "cat-belts",
-        "cat-scarves",
-        "cat-hair"
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4",
+        "collection-5"
       ],
       "settings": {
         "heading": "Curated Categories",
@@ -155,12 +148,6 @@
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p class=\"eyebrow\">The Mirevaine Heritage</p>"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -177,12 +164,12 @@
           "type": "button",
           "settings": {
             "label": "Discover The Atelier",
+            "link": "/collections/all",
             "style": "outline"
           }
         }
       },
       "block_order": [
-        "eyebrow",
         "heading",
         "text",
         "button"
@@ -230,34 +217,6 @@
         "color_scheme": "scheme_1"
       }
     },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Monograph Review",
-            "size": "h3",
-            "alignment": "center"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"font-size: 1.25rem; font-style: italic; max-width: 42rem; margin: 0 auto;\">&ldquo;Mirevaine redefines modern quiet luxury with remarkable restraint, immaculate material provenance, and an architectural grace that outlives seasons.&rdquo;</p><p class=\"eyebrow\" style=\"margin-top: 1rem;\">The Sartorial Journal &bull; Florence</p>",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "alignment": "center",
-        "color_scheme": "scheme_2"
-      }
-    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -274,7 +233,6 @@
     "featured-collection",
     "image-with-text",
     "multicolumn",
-    "rich-text",
     "newsletter"
   ]
 }
