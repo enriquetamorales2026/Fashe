@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "footer",
   "name": "Footer",
@@ -18,7 +9,7 @@
           "type": "text",
           "settings": {
             "heading": "MIREVAINE",
-            "text": "<p>Devoted to quiet permanence, noble textiles, and master European craftsmanship. Designed between Paris and Florence.</p>"
+            "text": "<p>Devoted to quiet permanence, noble textiles, and master European craftsmanship. Designed between Paris and Florence.</p><p><a href=\"/pages/about\">The Atelier Story</a></p>"
           }
         },
         "menu-categories": {
@@ -32,7 +23,7 @@
           "type": "text",
           "settings": {
             "heading": "Client Concierge",
-            "text": "<p>Bespoke Styling & Sizing<br>Archival Garment Care<br>Complimentary Global Shipping<br>concierge@mirevaine.com</p>"
+            "text": "<p><a href=\"/pages/contact\">Contact Concierge</a><br><a href=\"/pages/care\">Archival Care Guide</a><br>Complimentary Global Shipping<br>concierge@mirevaine.com</p>"
           }
         },
         "newsletter-gazette": {

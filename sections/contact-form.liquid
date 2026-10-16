@@ -23,7 +23,7 @@
       <div class="customer__grid customer__grid--two" style="margin-bottom: 1rem;">
         <div class="field">
           <label class="field__label" for="ContactName">{{ 'templates.contact.form.name' | t }}</label>
-          <input type="text" id="ContactName" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" autocomplete="name">
+          <input type="text" id="ContactName" name="contact[name]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" autocomplete="name">
         </div>
         <div class="field">
           <label class="field__label" for="ContactEmail">{{ 'templates.contact.form.email' | t }}</label>
@@ -33,12 +33,12 @@
 
       <div class="field" style="margin-bottom: 1rem;">
         <label class="field__label" for="ContactPhone">{{ 'templates.contact.form.phone' | t }}</label>
-        <input type="tel" id="ContactPhone" name="contact[{{ 'templates.contact.form.phone' | t }}]" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" autocomplete="tel">
+        <input type="tel" id="ContactPhone" name="contact[phone]" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" autocomplete="tel">
       </div>
 
       <div class="field">
         <label class="field__label" for="ContactBody">{{ 'templates.contact.form.comment' | t }}</label>
-        <textarea id="ContactBody" name="contact[{{ 'templates.contact.form.comment' | t }}]" required>{{ form.body }}</textarea>
+        <textarea id="ContactBody" name="contact[body]" required>{{ form.body }}</textarea>
       </div>
 
       <button type="submit" class="button" style="margin-top: 1rem;">{{ 'templates.contact.form.send' | t }}</button>

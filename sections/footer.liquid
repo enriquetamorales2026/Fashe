@@ -46,6 +46,16 @@
                       sizes: '(min-width: 750px) 12rem, 50vw',
                       alt: block.settings.image.alt
                   }}
+                {%- else -%}
+                  <img
+                    src="{{ 'mirevaine-logo.svg' | asset_url }}"
+                    alt="{{ shop.name }}"
+                    class="footer__logo-image"
+                    width="160"
+                    height="92"
+                    loading="lazy"
+                    onerror="this.onerror=null;this.src='{{ 'mirevaine-logo.png' | asset_url }}';"
+                  >
                 {%- endif -%}
             {%- endcase -%}
           </div>

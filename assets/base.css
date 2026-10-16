@@ -695,7 +695,12 @@ select {
   letter-spacing: -0.03em;
 }
 
-.header__logo img { width: var(--logo-width); height: auto; }
+.header__logo img,
+.header__logo svg {
+  width: var(--logo-width);
+  height: auto;
+  display: block;
+}
 
 .header__actions {
   display: flex;
@@ -753,6 +758,7 @@ select {
   text-decoration: none;
 }
 
+.nav__link:hover,
 .nav__link[aria-current='page'],
 .nav__item:hover > .nav__link {
   color: rgb(var(--color-accent));

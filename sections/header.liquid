@@ -34,10 +34,14 @@
             loading: 'eager'
         }}
       {%- else -%}
-        <span class="header__brand">
-          <span class="header__brand-title">MIREVAINE</span>
-          <span class="header__brand-sub">ATELIER &bull; PARIS</span>
-        </span>
+        <img
+          src="{{ 'mirevaine-logo.svg' | asset_url }}"
+          alt="{{ shop.name }}"
+          class="header__logo-image"
+          width="{{ settings.logo_width | default: 200 }}" height="{{ settings.logo_width | default: 200 | times: 328 | divided_by: 571 }}"
+          loading="eager"
+          onerror="this.onerror=null;this.src='{{ 'mirevaine-logo.png' | asset_url }}';"
+        >
       {%- endif -%}
     {%- endcapture -%}
 
@@ -46,63 +50,71 @@
     {%- else -%}
       <a href="{{ routes.root_url }}" class="header__logo">{{ logo }}</a>
 
-      <nav class="nav" role="navigation" aria-label="{{ 'sections.header.menu' | t }}">
+      <nav class="nav nav--center" role="navigation" aria-label="{{ 'sections.header.menu' | t }}">
         <ul class="nav__list" role="list">
-          {%- for link in menu.links -%}
-            <li class="nav__item">
-              <a
-                href="{{ link.url }}"
-                class="nav__link"
-                {% if link.current %}aria-current="page"{% endif %}
-              >
-                {{ link.title | escape }}
-                {%- if link.links.size > 0 %} {% render 'icon', name: 'chevron-down' %}{% endif -%}
-              </a>
+          {%- if menu.links.size > 0 -%}
+            {%- for link in menu.links -%}
+              <li class="nav__item">
+                <a
+                  href="{{ link.url }}"
+                  class="nav__link"
+                  {% if link.current %}aria-current="page"{% endif %}
+                >
+                  {{ link.title | escape }}
+                  {%- if link.links.size > 0 %} {% render 'icon', name: 'chevron-down' %}{% endif -%}
+                </a>
 
-              {%- if link.links.size > 0 -%}
-                {%- assign has_grandchildren = false -%}
-                {%- for child in link.links -%}
-                  {%- if child.links.size > 0 -%}
-                    {%- assign has_grandchildren = true -%}
-                    {%- break -%}
-                  {%- endif -%}
-                {%- endfor -%}
+                {%- if link.links.size > 0 -%}
+                  {%- assign has_grandchildren = false -%}
+                  {%- for child in link.links -%}
+                    {%- if child.links.size > 0 -%}
+                      {%- assign has_grandchildren = true -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
 
-                {%- if has_grandchildren -%}
-                  <div class="mega-menu">
-                    <div class="mega-menu__grid">
-                      {%- for child in link.links -%}
-                        <div>
-                          <p class="mega-menu__heading">
-                            <a href="{{ child.url }}" class="nav__link" style="padding: 0;">{{ child.title | escape }}</a>
-                          </p>
-                          {%- if child.links.size > 0 -%}
-                            <ul class="mega-menu__list" role="list">
-                              {%- for grandchild in child.links -%}
-                                <li>
-                                  <a href="{{ grandchild.url }}" class="nav__link">{{ grandchild.title | escape }}</a>
-                                </li>
-                              {%- endfor -%}
-                            </ul>
-                          {%- endif -%}
-                        </div>
-                      {%- endfor -%}
+                  {%- if has_grandchildren -%}
+                    <div class="mega-menu">
+                      <div class="mega-menu__grid">
+                        {%- for child in link.links -%}
+                          <div>
+                            <p class="mega-menu__heading">
+                              <a href="{{ child.url }}" class="nav__link" style="padding: 0;">{{ child.title | escape }}</a>
+                            </p>
+                            {%- if child.links.size > 0 -%}
+                              <ul class="mega-menu__list" role="list">
+                                {%- for grandchild in child.links -%}
+                                  <li>
+                                    <a href="{{ grandchild.url }}" class="nav__link">{{ grandchild.title | escape }}</a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </div>
+                        {%- endfor -%}
+                      </div>
                     </div>
-                  </div>
-                {%- else -%}
-                  <ul class="nav__dropdown" role="list">
-                    {%- for child in link.links -%}
-                      <li>
-                        <a href="{{ child.url }}" class="nav__link" {% if child.current %}aria-current="page"{% endif %}>
-                          {{ child.title | escape }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
+                  {%- else -%}
+                    <ul class="nav__dropdown" role="list">
+                      {%- for child in link.links -%}
+                        <li>
+                          <a href="{{ child.url }}" class="nav__link" {% if child.current %}aria-current="page"{% endif %}>
+                            {{ child.title | escape }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
                 {%- endif -%}
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
+              </li>
+            {%- endfor -%}
+          {%- endif -%}
+          <li class="nav__item"><a href="/collections/all" class="nav__link" {% if request.path == '/collections/all' %}aria-current="page"{% endif %}>All</a></li>
+          <li class="nav__item"><a href="/collections/handbags" class="nav__link" {% if request.path == '/collections/handbags' %}aria-current="page"{% endif %}>Handbags</a></li>
+          <li class="nav__item"><a href="/collections/jewelry" class="nav__link" {% if request.path == '/collections/jewelry' %}aria-current="page"{% endif %}>Jewelry</a></li>
+          <li class="nav__item"><a href="/collections/belts" class="nav__link" {% if request.path == '/collections/belts' %}aria-current="page"{% endif %}>Belts</a></li>
+          <li class="nav__item"><a href="/collections/scarves" class="nav__link" {% if request.path == '/collections/scarves' %}aria-current="page"{% endif %}>Scarves</a></li>
+          <li class="nav__item"><a href="/collections/hair-accessories" class="nav__link" {% if request.path == '/collections/hair-accessories' %}aria-current="page"{% endif %}>Hair accessories</a></li>
         </ul>
       </nav>
     {%- endif -%}
@@ -134,6 +146,45 @@
       </a>
     </div>
   </header>
+
+  {%- if section.settings.layout == 'center' -%}
+    <nav class="nav nav--center page-width" role="navigation" aria-label="{{ 'sections.header.menu' | t }}" style="border-top: 1px solid rgb(var(--color-border) / 0.5);">
+      <ul class="nav__list" role="list">
+        {%- if menu.links.size > 0 -%}
+          {%- for link in menu.links -%}
+            <li class="nav__item">
+              <a
+                href="{{ link.url }}"
+                class="nav__link"
+                {% if link.current %}aria-current="page"{% endif %}
+              >
+                {{ link.title | escape }}
+                {%- if link.links.size > 0 %} {% render 'icon', name: 'chevron-down' %}{% endif -%}
+              </a>
+
+              {%- if link.links.size > 0 -%}
+                <ul class="nav__dropdown" role="list">
+                  {%- for child in link.links -%}
+                    <li>
+                      <a href="{{ child.url }}" class="nav__link" {% if child.current %}aria-current="page"{% endif %}>
+                        {{ child.title | escape }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
+        <li class="nav__item"><a href="/collections/all" class="nav__link" {% if request.path == '/collections/all' %}aria-current="page"{% endif %}>All</a></li>
+        <li class="nav__item"><a href="/collections/handbags" class="nav__link" {% if request.path == '/collections/handbags' %}aria-current="page"{% endif %}>Handbags</a></li>
+        <li class="nav__item"><a href="/collections/jewelry" class="nav__link" {% if request.path == '/collections/jewelry' %}aria-current="page"{% endif %}>Jewelry</a></li>
+        <li class="nav__item"><a href="/collections/belts" class="nav__link" {% if request.path == '/collections/belts' %}aria-current="page"{% endif %}>Belts</a></li>
+        <li class="nav__item"><a href="/collections/scarves" class="nav__link" {% if request.path == '/collections/scarves' %}aria-current="page"{% endif %}>Scarves</a></li>
+        <li class="nav__item"><a href="/collections/hair-accessories" class="nav__link" {% if request.path == '/collections/hair-accessories' %}aria-current="page"{% endif %}>Hair accessories</a></li>
+      </ul>
+    </nav>
+  {%- endif -%}
 </div>
 
 {%- comment -%} Mobile navigation {%- endcomment -%}
@@ -184,6 +235,15 @@
             {%- endif -%}
           </li>
         {%- endfor -%}
+        <li><a href="/collections/all">All Accessories</a></li>
+        <li><a href="/collections/handbags">Handbags</a></li>
+        <li><a href="/collections/jewelry">Jewelry</a></li>
+        <li><a href="/collections/belts">Belts</a></li>
+        <li><a href="/collections/scarves">Scarves</a></li>
+        <li><a href="/collections/hair-accessories">Hair accessories</a></li>
+        <li style="border-top: 1px solid rgb(var(--color-border) / 0.5); margin-top: 0.75rem; padding-top: 0.75rem;"><a href="/pages/about">The Atelier Story</a></li>
+        <li><a href="/pages/care">Archival Care Guide</a></li>
+        <li><a href="/pages/contact">Client Concierge</a></li>
       </ul>
 
       {%- if shop.customer_accounts_enabled -%}

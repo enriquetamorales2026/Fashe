@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Mirevaine Atelier Story",
+            "size": "h0",
+            "alignment": "center"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Devoted to artisanal Tuscan leatherwork, noble fibres, and European heritage craft designed for timeless distinction.</p>",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": 70,
+        "overlay_opacity": 20,
+        "content_position": "center",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quiet Luxury & Sculpted Permanence",
+            "size": "h2",
+            "alignment": "center"
+          }
+        },
+        "editorial": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mirevaine was founded on the conviction that true luxury never shouts. Our accessories embody quiet confidence—unencumbered by logos, guided by architectural proportion, and elevated by the finest natural materials. From our Florence leather workshops to our silk printing ateliers in Como, every stitch celebrates enduring European craft.</p>",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "editorial"
+      ],
+      "settings": {
+        "alignment": "center",
+        "color_scheme": "scheme_2"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "pillar_leather": {
+          "type": "column",
+          "settings": {
+            "heading": "Artisanal Tuscan Leatherwork",
+            "text": "<p>Vegetable-tanned full-grain cowhides steeped in chestnut and mimosa tannins along the Arno river basin, developing an archival patina over decades.</p>"
+          }
+        },
+        "pillar_textiles": {
+          "type": "column",
+          "settings": {
+            "heading": "Noble Fibres & Hand-Rolled Silk",
+            "text": "<p>100% pure Mulberry silk twill and grade-A Mongolian cashmere, loomed to substantial weight and finished with hand-rolled needle edges.</p>"
+          }
+        },
+        "pillar_hardware": {
+          "type": "column",
+          "settings": {
+            "heading": "European Heritage Metalcraft",
+            "text": "<p>Cast solid brass hardware and brushed warm gold vermeil, individually hand-polished to provide permanent durability and quiet luster.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pillar_leather",
+        "pillar_textiles",
+        "pillar_hardware"
+      ],
+      "settings": {
+        "heading": "The Three Pillars of Our Craft",
+        "heading_size": "h2",
+        "alignment": "center",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "The Mirevaine Gazette",
+        "heading_size": "h2",
+        "text": "<p>Subscribe for private archival previews, salon exhibition invitations, and intimate glimpses into our European workshops.</p>",
+        "color_scheme": "scheme_2"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "rich_text",
+    "multicolumn",
+    "newsletter"
+  ]
+}

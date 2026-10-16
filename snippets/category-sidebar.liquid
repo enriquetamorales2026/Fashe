@@ -28,6 +28,15 @@
           </li>
         {%- endfor -%}
       {%- else -%}
+        <li class="category-sidebar__item">
+          <a
+            href="/collections/all"
+            class="category-sidebar__link{% if collection.handle == 'all' %} category-sidebar__link--active{% endif %}"
+            {% if collection.handle == 'all' %}aria-current="page"{% endif %}
+          >
+            <span class="category-sidebar__name">All Accessories</span>
+          </a>
+        </li>
         {%- comment -%} Curated luxury category defaults as requested {%- endcomment -%}
         {%- assign default_categories = "Handbags,Jewelry,Belts,Scarves,Hair accessories" | split: "," -%}
         {%- for cat in default_categories -%}

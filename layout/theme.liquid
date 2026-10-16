@@ -11,11 +11,13 @@
     <meta name="theme-color" content="{{ settings.color_schemes.scheme_1.settings.background }}">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
-      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+    <link rel="icon" type="image/svg+xml" href="{{ 'mirevaine-favicon.svg' | asset_url }}">
+    {%- if settings.favicon != blank and settings.favicon != 'mirevaine-favicon.png' -%}
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
     {%- else -%}
-      <link rel="icon" type="image/svg+xml" href="{{ 'mirevaine-favicon.svg' | asset_url }}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ 'mirevaine-favicon.png' | asset_url }}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ 'mirevaine-favicon.png' | asset_url }}">
     {%- endif -%}
 
     <title>
@@ -31,6 +33,11 @@
 
     {% render 'meta-tags' %}
 
+    <style>
+      :root {
+        --logo-width: {{ settings.logo_width | default: 200 }}px;
+      }
+    </style>
     <style>{% render 'theme-styles' %}</style>
 
     {{ 'base.css' | asset_url | stylesheet_tag }}

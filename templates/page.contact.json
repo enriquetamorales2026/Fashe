@@ -1,10 +1,83 @@
 {
   "sections": {
-    "main": { "type": "main-page", "settings": { "color_scheme": "scheme_1" } },
-    "contact": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Client Concierge & Private Appointments",
+            "size": "h0",
+            "alignment": "center"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our European atelier concierge welcomes private client appointments, bespoke commissions, and archival care inquiries.</p>",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": 60,
+        "overlay_opacity": 20,
+        "content_position": "center",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "appointment": {
+          "type": "column",
+          "settings": {
+            "heading": "Private Salon Appointments",
+            "text": "<p>Reserve an intimate consultation at our Florence or London salon for personalized styling, archival previews, and bespoke fittings.</p>"
+          }
+        },
+        "bespoke": {
+          "type": "column",
+          "settings": {
+            "heading": "Bespoke Inquiries & Monograms",
+            "text": "<p>Commission customized leather finishes, personalized hot-stamped gold foil initials, and made-to-order hardware variations.</p>"
+          }
+        },
+        "concierge": {
+          "type": "column",
+          "settings": {
+            "heading": "Client Care & Restoration",
+            "text": "<p>Access white-glove archival restoration, edge re-burnishing, fine jewelry ultrasonic spa cleansing, and silk preservation assistance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "appointment",
+        "bespoke",
+        "concierge"
+      ],
+      "settings": {
+        "heading": "Atelier Touchpoints",
+        "heading_size": "h2",
+        "alignment": "center",
+        "color_scheme": "scheme_2"
+      }
+    },
+    "contact_form": {
       "type": "contact-form",
-      "settings": { "heading": "Contact us", "color_scheme": "scheme_1" }
+      "settings": {
+        "heading": "Send a Message to Our Concierge",
+        "color_scheme": "scheme_1"
+      }
     }
   },
-  "order": ["main", "contact"]
+  "order": [
+    "hero",
+    "multicolumn",
+    "contact_form"
+  ]
 }

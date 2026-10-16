@@ -1,61 +1,72 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
     "color_schemes": {
       "scheme_1": {
+        "background": "#FAF8F5",
+        "text": "#2E1E16",
+        "button": "#2E1E16",
+        "accent": "#B38E5D",
+        "border": "#EAE4D9",
         "settings": {
-          "background": "#faf8f5",
+          "background": "#FAF8F5",
           "background_gradient": "",
-          "text": "#141312",
-          "button": "#141312",
-          "button_label": "#faf8f5",
-          "outline_button": "#141312",
-          "accent": "#b38e5d",
-          "border": "#eae4d9"
+          "text": "#2E1E16",
+          "button": "#2E1E16",
+          "button_label": "#FAF8F5",
+          "outline_button": "#2E1E16",
+          "accent": "#B38E5D",
+          "border": "#EAE4D9"
         }
       },
       "scheme_2": {
+        "background": "#F2EDE4",
+        "text": "#2E1E16",
+        "button": "#2E1E16",
+        "accent": "#B38E5D",
+        "border": "#DED5C6",
         "settings": {
-          "background": "#f2ede4",
+          "background": "#F2EDE4",
           "background_gradient": "",
-          "text": "#141312",
-          "button": "#141312",
-          "button_label": "#f2ede4",
-          "outline_button": "#141312",
-          "accent": "#a07c4b",
-          "border": "#ded5c6"
+          "text": "#2E1E16",
+          "button": "#2E1E16",
+          "button_label": "#F2EDE4",
+          "outline_button": "#2E1E16",
+          "accent": "#B38E5D",
+          "border": "#DED5C6"
         }
       },
       "scheme_3": {
+        "background": "#2E1E16",
+        "text": "#FAF8F5",
+        "button": "#FAF8F5",
+        "accent": "#B38E5D",
+        "border": "#443026",
         "settings": {
-          "background": "#121110",
+          "background": "#2E1E16",
           "background_gradient": "",
-          "text": "#f7f4ee",
-          "button": "#f7f4ee",
-          "button_label": "#121110",
-          "outline_button": "#f7f4ee",
-          "accent": "#cbb08b",
-          "border": "#282522"
+          "text": "#FAF8F5",
+          "button": "#FAF8F5",
+          "button_label": "#2E1E16",
+          "outline_button": "#FAF8F5",
+          "accent": "#B38E5D",
+          "border": "#443026"
         }
       },
       "scheme_4": {
+        "background": "#2E1E16",
+        "text": "#FAF8F5",
+        "button": "#B38E5D",
+        "accent": "#B38E5D",
+        "border": "#443026",
         "settings": {
-          "background": "#201e1b",
+          "background": "#2E1E16",
           "background_gradient": "",
-          "text": "#faf8f5",
-          "button": "#cbb08b",
-          "button_label": "#121110",
-          "outline_button": "#cbb08b",
-          "accent": "#cbb08b",
-          "border": "#35322d"
+          "text": "#FAF8F5",
+          "button": "#B38E5D",
+          "button_label": "#2E1E16",
+          "outline_button": "#B38E5D",
+          "accent": "#B38E5D",
+          "border": "#443026"
         }
       }
     },
@@ -97,10 +108,10 @@
         "scheme_1": {
           "settings": {
             "background": "#faf8f5",
-            "text": "#141312",
-            "button": "#141312",
+            "text": "#2e1e16",
+            "button": "#2e1e16",
             "button_label": "#faf8f5",
-            "outline_button": "#141312",
+            "outline_button": "#2e1e16",
             "accent": "#b38e5d",
             "border": "#eae4d9"
           }
@@ -108,23 +119,23 @@
         "scheme_2": {
           "settings": {
             "background": "#f2ede4",
-            "text": "#141312",
-            "button": "#141312",
+            "text": "#2e1e16",
+            "button": "#2e1e16",
             "button_label": "#f2ede4",
-            "outline_button": "#141312",
-            "accent": "#a07c4b",
+            "outline_button": "#2e1e16",
+            "accent": "#b38e5d",
             "border": "#ded5c6"
           }
         },
         "scheme_3": {
           "settings": {
-            "background": "#121110",
-            "text": "#f7f4ee",
-            "button": "#f7f4ee",
-            "button_label": "#121110",
-            "outline_button": "#f7f4ee",
-            "accent": "#cbb08b",
-            "border": "#282522"
+            "background": "#2e1e16",
+            "text": "#faf8f5",
+            "button": "#faf8f5",
+            "button_label": "#2e1e16",
+            "outline_button": "#faf8f5",
+            "accent": "#b38e5d",
+            "border": "#3d2a20"
           }
         }
       },
@@ -138,13 +149,13 @@
       "color_schemes": {
         "scheme_1": {
           "settings": {
-            "background": "#121110",
-            "text": "#f7f4ee",
-            "button": "#f7f4ee",
-            "button_label": "#121110",
-            "outline_button": "#f7f4ee",
-            "accent": "#cbb08b",
-            "border": "#282522"
+            "background": "#2e1e16",
+            "text": "#faf8f5",
+            "button": "#faf8f5",
+            "button_label": "#2e1e16",
+            "outline_button": "#faf8f5",
+            "accent": "#b38e5d",
+            "border": "#3d2a20"
           }
         }
       },

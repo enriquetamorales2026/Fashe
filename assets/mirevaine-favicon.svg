@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="12" fill="#141312"/>
-  <text x="32" y="42" font-family="'Cormorant Garamond', serif" font-size="34" font-weight="600" fill="#FAF8F5" text-anchor="middle">M</text>
-  <circle cx="32" cy="18" r="2.5" fill="#B38E5D"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 148" width="100%" height="100%">
+  <title>Mirevaine Monogram</title>
+  <rect width="148" height="148" rx="28" fill="#2E1E16"/>
+  <g fill="#FAF8F5" text-anchor="middle">
+    <text x="74" y="98" font-family="'Cormorant Garamond', 'Didot', 'Bodoni MT', 'Cinzel', serif" font-size="78" font-weight="600" letter-spacing="0.02em">M</text>
+  </g>
+  <circle cx="74" cy="38" r="5" fill="#B38E5D"/>
+  <path d="M42 108 C54 116 94 116 106 108" fill="none" stroke="#B38E5D" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
 </svg>

@@ -1,0 +1,124 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Archival Care & Preservation Guide",
+            "size": "h0",
+            "alignment": "center"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Protect the enduring beauty and structural permanence of your Mirevaine Tuscan leather, fine jewelry, and noble fibre accessories.</p>",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": 60,
+        "overlay_opacity": 20,
+        "content_position": "center",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "care_accordions": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Material Preservation Protocols",
+            "size": "h2",
+            "alignment": "center"
+          }
+        },
+        "leather_care": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Artisanal Tuscan Leather Preservation",
+            "content": "<p>Store your leather handbag or belt inside its provided organic unbleached cotton dust bag when not in use. Shield from direct moisture, prolonged heat, and intense sunlight. Condition twice yearly with a neutral beeswax and organic jojoba leather balm, applying in small circular motions to maintain natural suppleness and protect the grain.</p>",
+            "open": true
+          }
+        },
+        "gold_metal_care": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Brushed Warm Gold Vermeil & Fine Metal Polishing",
+            "content": "<p>To protect the brushed satin gold finish of your jewelry and hardware, avoid contact with perfumes, chlorine, and chemical cleansers. Gently buff surfaces after each wear with our specialized microfiber jewelry polishing cloth. For deeper cleansing, use lukewarm filtered water and mild castile soap, drying immediately with a lint-free cloth.</p>",
+            "open": false
+          }
+        },
+        "silk_fibre_care": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Mulberry Silk & Noble Fibre Care",
+            "content": "<p>Store folded silk scarves and cashmere wraps flat inside an archival box. Never wring or machine-wash noble textiles. For gentle wrinkle release, steam lightly from the reverse side at a 6-inch distance without touching the fabric. For stain treatment, entrust your piece exclusively to a specialized luxury heritage dry cleaner.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "leather_care",
+        "gold_metal_care",
+        "silk_fibre_care"
+      ],
+      "settings": {
+        "alignment": "center",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "restoration_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Concierge Restoration & Atelier Servicing",
+            "size": "h2",
+            "alignment": "center"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Mirevaine piece is created with lifetime longevity in mind. Our client concierge and European restoration master artisans offer edge burnishing, leather spa treatments, and hardware servicing.</p>",
+            "alignment": "center"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Inquire with Client Concierge",
+            "link": "/pages/contact",
+            "style": "solid",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "alignment": "center",
+        "color_scheme": "scheme_2"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "care_accordions",
+    "restoration_cta"
+  ]
+}
